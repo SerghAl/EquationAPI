@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EquationAPI</title>
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+</head>
+<body>
+    <main class="main">
+        <h1 class="main__title">Решение алгебраических уравнений</h1>
+        <section class="main__section qe">
+            <h2 class="qe__title">Квадратное уравнение</h2>
+            <p class="qe__desc"></p>
+            <div class="qe__inputs">
+                <input type="text" value="1" name="qe-a" id="qe-a" class="qe__input">
+                <span class="qe__var">x<sup>2</sup> + </span>
+                <input type="text" value="1" name="qe-b" id="qe-b" class="qe__input">
+                <span class="qe__var">x + </span>
+                <input type="text" value="1" name="qe-c" id="qe-c" class="qe__input">
+                <span class="qe__var"> = 0</span>
+            </div>
+            <div class="qe__btns">
+                <button class="qe__send-btn">Решить уравнение</button>
+            </div>
+            <div class="qe__results">
+
+            </div>
+        </section>
+        <section class="main__section ce">
+            <h2 class="ce__title">Кубическое уравнение</h2>
+            <p class="ce__desc"></p>
+            <div class="ce__inputs">
+                <input type="text" value="1" name="qe-a" id="ce-a" class="qe__input">
+                <span class="ce__var">x<sup>3</sup> + </span>
+                <input type="text" value="1" name="qe-b" id="ce-b" class="qe__input">
+                <span class="ce__var">x<sup>2</sup>  + </span>
+                <input type="text" value="1" name="qe-c" id="ce-c" class="qe__input">
+                <span class="ce__var">x  + </span>
+                <input type="text" value="1" name="qe-d" id="ce-d" class="qe__input">
+                <span class="ce__var"> = 0</span>
+            </div>
+            <div class="ce__btns">
+                <button class="ce__send-btn">Решить уравнение</button>
+            </div>
+            <div class="ce__results">
+
+            </div>
+        </section>
+    </main>
+    <script src="http://localhost:3000/js/main.js"></script>
+</body>
+</html>

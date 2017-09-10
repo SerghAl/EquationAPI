@@ -1,0 +1,90 @@
+html {
+    font-family: Arial;
+    background: #aae5ff;
+}
+
+.main {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.main__title {
+    margin: 0 auto 15px;
+    text-shadow: 1px 1px 2px #666;
+    color: white;
+    text-align: center;
+}
+
+.main__section {
+    width: 100%;
+}
+
+.qe__title,
+.ce__title{
+    margin: 0 auto 15px;
+    text-shadow: 1px 1px 2px #666;
+    color: white;
+    text-align: center;
+}
+
+.qe__desc,
+.ce__desc{
+    width: 50%;
+    margin: 15px auto;
+}
+
+.qe__inputs,
+.ce__inputs{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.qe__input,
+.ce__input {
+    max-width: 80px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: right;
+}
+
+.qe__btns,
+.ce__btns{
+    width: 100%;
+    text-align: center;
+}
+
+.qe__send-btn,
+.ce__send-btn{
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: #659fdc;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 1px 1px 2px #666;
+}
+
+.result__block {
+    width: 50%;
+    margin: 0 auto 15px;
+    min-width: 280px;
+    background: white;
+    border: 1px solid #666;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #666;
+}
+
+.result__root-name {
+    display: inline-block;
+    padding: 10px 0;
+    width: 20%;
+    margin-right: 10px;
+    text-align: center;
+    background: #659fdc;
+    color: white;
+    border-right: 1px solid #666;
+}
