@@ -54,10 +54,10 @@
 
                 switch(arguments.length){
                     case 3:
-                        url = `/?equation_type=quadratic&a=${a}&b=${b}&c=${c}`;
+                        url = `/api/v1/quadratic/?&a=${a}&b=${b}&c=${c}`;
                         break;
                     case 4:
-                        url = `/?equation_type=cubic&a=${a}&b=${b}&c=${c}&d=${d}`;
+                        url = `/api/v1/cubic/?&a=${a}&b=${b}&c=${c}&d=${d}`;
                 }
 
                 xhr.open(method, url, true);
