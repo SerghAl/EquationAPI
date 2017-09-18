@@ -23,7 +23,7 @@
 
             computeEquation(a, b, c)
                 .then(result => renderResult(result, resultAreaSelector))
-                .catch(e => console.error(e.message));
+                .catch(e => console.error(e.code, e.message));
         });
 
         ceBtn.addEventListener(`click`, (e) => {
@@ -43,7 +43,7 @@
 
             computeEquation(a, b, c, d)
                 .then(result => renderResult(result, resultAreaSelector))
-                .catch(e => console.error(e.message));
+                .catch(e => console.error(e.code, e.message));
         });
 
         qteBtn.addEventListener(`click`, (e) => {
@@ -63,8 +63,8 @@
             let resultAreaSelector = `.qte__results`;
 
             computeEquation(a, b, c, d, e1)
-                .then(result => renderResult(result, resultAreaSelector))
-                .catch(e => console.error(e.message));
+                .then(result => {renderResult(result, resultAreaSelector)})
+                .catch(e => console.error(e.code, e.message));
         });
 
         function computeEquation(a, b, c, d, e){
@@ -94,7 +94,12 @@
                     } else {
                         console.log(xhr.responseText);
                         let result = JSON.parse(xhr.responseText);
-                        resolve(result);
+
+                        if(result.result === 'ok'){
+                            resolve(result.data);
+                        } else if(result.result === 'error'){
+                            reject(result.error);
+                        }
                     }
                 };
 

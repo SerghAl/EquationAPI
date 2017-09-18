@@ -1,69 +1,44 @@
-const quadraticEquation = require(`../app_modules/quadratic-equation`);
-const cubicEquation = require(`../app_modules/cubic-equation`);
-const quarticEquation = require(`../app_modules/quartic-equation`);
-const isNumeric = require(`../app_modules/validator`);
+const Mathematics = require('../app_modules/mathematics');
+let mathematics = new Mathematics;
 
 module.exports.quadraticEquation = function(req, res) {
     let query = req.query;
     if(Object.keys(query).length) {
-        let a = isNumeric(query.a) ? query.a : null;
-        let b = isNumeric(query.b) ? query.b : null;
-        let c = isNumeric(query.c) ? query.c : null;
+        let a = query.a;
+        let b = query.b;
+        let c = query.c;
 
-        if (!isNumeric(a, b, c)) {
-            res.status(400);
-            res.send(`Попытка ввода неизвестных параметров`);
-        } else {
-            let result = quadraticEquation(a, b, c);
-            res.json(result);
-        }
+        res.json(mathematics.quadraticEquation(a, b, c));
     } else {
-        res.status(400);
-        res.send(`Не переданы параметры уравнения`);
+        res.json(mathematics.error(1000));
     }
 };
 
 module.exports.cubicEquation = function(req, res) {
     let query = req.query;
     if(Object.keys(query).length) {
-        let a = isNumeric(query.a) ? query.a : null;
-        let b = isNumeric(query.b) ? query.b : null;
-        let c = isNumeric(query.c) ? query.c : null;
-        let d = isNumeric(query.d) ? query.d : null;
+        let a = query.a;
+        let b = query.b;
+        let c = query.c;
+        let d = query.d;
 
-        if (!isNumeric(a, b, c, d)) {
-            res.status(400);
-            res.send(`Попытка ввода неизвестных параметров`);
-        } else {
-            let result = cubicEquation(a, b, c, d);
-            res.json(result);
-        }
+        res.json(mathematics.cubicEquation(a, b, c, d));
     } else {
-        res.status(400);
-        res.send(`Не переданы параметры уравнения`);
+        res.json(mathematics.error(1000));
     }
 };
-
 
 module.exports.quarticEquation = function(req, res) {
     let query = req.query;
     if(Object.keys(query).length) {
-        let a = isNumeric(query.a) ? query.a : null;
-        let b = isNumeric(query.b) ? query.b : null;
-        let c = isNumeric(query.c) ? query.c : null;
-        let d = isNumeric(query.d) ? query.d : null;
-        let e = isNumeric(query.e) ? query.e : null;
+        let a = query.a;
+        let b = query.b;
+        let c = query.c;
+        let d = query.d;
+        let e = query.e;
 
-        if (!isNumeric(a, b, c, d, e)) {
-            res.status(400);
-            res.send(`Попытка ввода неизвестных параметров`);
-        } else {
-            let result = quarticEquation(a, b, c, d, e);
-            console.log(result);
-            res.json(result);
-        }
+        res.json(mathematics.quarticEquation(a, b, c, d, e));
     } else {
-        res.status(400);
-        res.send(`Не переданы параметры уравнения`);
+        res.json(mathematics.error(1000));
     }
 };

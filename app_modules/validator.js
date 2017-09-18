@@ -1,6 +1,6 @@
 `use strict`
 
-function validateInputNumbers(){
+module.exports.isNumeric = function (){
     for(let i = 0; i < arguments.length; i++){
         let n = arguments[i];
         if(isNaN(parseFloat(n)) || !isFinite(n)){
@@ -8,6 +8,14 @@ function validateInputNumbers(){
         }
     }
     return true;
-}
+};
 
-module.exports = validateInputNumbers;
+module.exports.isUndefined = function(){
+    for(let i = 0; i < arguments.length; i++){
+        let n = arguments[i];
+        if(n === undefined){
+            return true;
+        }
+    }
+    return false;
+};
