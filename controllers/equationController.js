@@ -1,4 +1,4 @@
-const Mathematics = require('../app_modules/mathematics');
+const Mathematics = require(`../app_modules/mathematics`);
 let mathematics = new Mathematics;
 
 module.exports.quadraticEquation = function(req, res) {

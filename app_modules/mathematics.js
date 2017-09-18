@@ -1,11 +1,11 @@
 `use strict`
 
-let quadraticEquation = require('./quadratic-equation');
-let cubicEquation = require('./cubic-equation');
-let quarticEquation = require('./quartic-equation');
-let UnifiedAnswer = require('./unified-answer');
-let isUndefined = require('./validator').isUndefined;
-let isNumeric = require('./validator').isNumeric;
+let quadraticEquation = require(`./quadratic-equation`);
+let cubicEquation = require(`./cubic-equation`);
+let quarticEquation = require(`./quartic-equation`);
+let UnifiedAnswer = require(`./unified-answer`);
+let isUndefined = require(`./validator`).isUndefined;
+let isNumeric = require(`./validator`).isNumeric;
 
 class Mathematics extends UnifiedAnswer {
     quadraticEquation(a, b, c){

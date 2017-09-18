@@ -1,7 +1,7 @@
 `use strict`
 
-let quadraticEquation = require('./quadratic-equation');
-let cubicEquation = require('./cubic-equation');
+let quadraticEquation = require(`./quadratic-equation`);
+let cubicEquation = require(`./cubic-equation`);
 
 function computeRoots(a, b, c, d){
     let aCubic = 1;
