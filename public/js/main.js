@@ -92,7 +92,6 @@
                     if(xhr.status !== 200){
                         reject(new Error(`Запрос не удался`));
                     } else {
-                        console.log(xhr.responseText);
                         let result = JSON.parse(xhr.responseText);
 
                         if(result.result === 'ok'){

@@ -1,3 +1,5 @@
+`use strict`
+
 const Mathematics = require(`../app_modules/mathematics`);
 let mathematics = new Mathematics;
 
