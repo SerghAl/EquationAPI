@@ -5,6 +5,7 @@
 
         let qeBtn = document.querySelector(`.qe__send-btn`);
         let ceBtn = document.querySelector(`.ce__send-btn`);
+        let qteBtn = document.querySelector(`.qte__send-btn`);
 
         qeBtn.addEventListener(`click`, (e) => {
             e.preventDefault();
@@ -45,7 +46,28 @@
                 .catch(e => console.error(e.message));
         });
 
-        function computeEquation(a, b, c, d){
+        qteBtn.addEventListener(`click`, (e) => {
+            e.preventDefault();
+
+            let a = document.getElementById(`qte-a`).value;
+            let b = document.getElementById(`qte-b`).value;
+            let c = document.getElementById(`qte-c`).value;
+            let d = document.getElementById(`qte-d`).value;
+            let e1 = document.getElementById(`qte-e`).value;
+
+            if(!validateInputNumbers(a, b, c, d, e1)){
+                alert(`Необходимо ввести численные значения!`);
+                return false;
+            }
+
+            let resultAreaSelector = `.qte__results`;
+
+            computeEquation(a, b, c, d, e1)
+                .then(result => renderResult(result, resultAreaSelector))
+                .catch(e => console.error(e.message));
+        });
+
+        function computeEquation(a, b, c, d, e){
             return new Promise((resolve, reject) => {
 
                 let xhr = new XMLHttpRequest();
@@ -58,6 +80,10 @@
                         break;
                     case 4:
                         url = `/api/v1/cubic/?&a=${a}&b=${b}&c=${c}&d=${d}`;
+                        break;
+                    case 5:
+                        url = `/api/v1/quartic/?&a=${a}&b=${b}&c=${c}&d=${d}&e=${e}`;
+                        break;
                 }
 
                 xhr.open(method, url, true);

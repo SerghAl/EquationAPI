@@ -20,7 +20,8 @@ html {
 }
 
 .qe__title,
-.ce__title{
+.ce__title,
+.qte__title{
     margin: 0 auto 15px;
     text-shadow: 1px 1px 2px #666;
     color: white;
@@ -28,19 +29,22 @@ html {
 }
 
 .qe__desc,
-.ce__desc{
+.ce__desc,
+.qte__desc{
     width: 50%;
     margin: 15px auto;
 }
 
 .qe__inputs,
-.ce__inputs{
+.ce__inputs,
+.qte__inputs{
     text-align: center;
     margin-bottom: 15px;
 }
 
 .qe__input,
-.ce__input {
+.ce__input,
+.qte__input {
     max-width: 80px;
     border: 1px solid #666;
     border-radius: 5px;
@@ -49,13 +53,15 @@ html {
 }
 
 .qe__btns,
-.ce__btns{
+.ce__btns,
+.qte__btns {
     width: 100%;
     text-align: center;
 }
 
 .qe__send-btn,
-.ce__send-btn{
+.ce__send-btn,
+.qte__send-btn {
     display: inline-block;
     margin-bottom: 15px;
     padding: 10px;

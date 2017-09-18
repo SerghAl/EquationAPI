@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.get(`/quadratic`, equationController.quadraticEquation);
 router.get(`/cubic`, equationController.cubicEquation);
+router.get(`/quartic`, equationController.quarticEquation);
 
 module.exports = router;

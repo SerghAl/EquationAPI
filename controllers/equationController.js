@@ -1,5 +1,6 @@
 const quadraticEquation = require(`../app_modules/quadratic-equation`);
 const cubicEquation = require(`../app_modules/cubic-equation`);
+const quarticEquation = require(`../app_modules/quartic-equation`);
 const isNumeric = require(`../app_modules/validator`);
 
 module.exports.quadraticEquation = function(req, res) {
@@ -30,11 +31,35 @@ module.exports.cubicEquation = function(req, res) {
         let c = isNumeric(query.c) ? query.c : null;
         let d = isNumeric(query.d) ? query.d : null;
 
-        if (!isNumeric(a, b, c)) {
+        if (!isNumeric(a, b, c, d)) {
             res.status(400);
             res.send(`Попытка ввода неизвестных параметров`);
         } else {
             let result = cubicEquation(a, b, c, d);
+            res.json(result);
+        }
+    } else {
+        res.status(400);
+        res.send(`Не переданы параметры уравнения`);
+    }
+};
+
+
+module.exports.quarticEquation = function(req, res) {
+    let query = req.query;
+    if(Object.keys(query).length) {
+        let a = isNumeric(query.a) ? query.a : null;
+        let b = isNumeric(query.b) ? query.b : null;
+        let c = isNumeric(query.c) ? query.c : null;
+        let d = isNumeric(query.d) ? query.d : null;
+        let e = isNumeric(query.e) ? query.e : null;
+
+        if (!isNumeric(a, b, c, d, e)) {
+            res.status(400);
+            res.send(`Попытка ввода неизвестных параметров`);
+        } else {
+            let result = quarticEquation(a, b, c, d, e);
+            console.log(result);
             res.json(result);
         }
     } else {
