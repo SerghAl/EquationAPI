@@ -3,6 +3,10 @@ html {
     background: #aae5ff;
 }
 
+body {
+    margin: 0;
+}
+
 .main {
     width: 100%;
     padding-top: 15px;
@@ -19,32 +23,69 @@ html {
     width: 100%;
 }
 
+.main__nav {
+    width: 100%;
+    margin: -15px 0 15px;
+    background: #659FDC;
+}
+
+.nav {
+    display: inline-block;
+    width: 100%;
+}
+
+.nav__list {
+    list-style: none;
+    text-align: center;
+}
+
+.nav__item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.nav__link--active {
+    background: #fff;
+    color: #659FDC;
+    display: inline-block;
+    border-radius: 5px;
+}
+
 .qe__title,
 .ce__title,
-.qte__title{
+.qte__title {
     margin: 0 auto 15px;
     text-shadow: 1px 1px 2px #666;
     color: white;
     text-align: center;
 }
 
-.qe__desc,
-.ce__desc,
-.qte__desc{
+.vectors__desc {
+    text-shadow: 1px 1px 2px #666;
     width: 50%;
+    text-align: center;
     margin: 15px auto;
+    color: #fff;
 }
 
 .qe__inputs,
 .ce__inputs,
-.qte__inputs{
+.qte__inputs,
+.vectors__inputs{
     text-align: center;
     margin-bottom: 15px;
 }
 
 .qe__input,
 .ce__input,
-.qte__input {
+.qte__input,
+.vectors__input{
     max-width: 80px;
     border: 1px solid #666;
     border-radius: 5px;
@@ -52,16 +93,69 @@ html {
     text-align: right;
 }
 
+.vectors__input{
+    max-width: 150px;
+    text-align: left;
+    margin-right: 5px;
+}
+
+.vectors__list {
+    display: inline-block;
+}
+
+.vectors__item {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.vectors__del-btn {
+    height: 26px;
+    width: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    box-shadow: none;
+    outline: none;
+    background: #ff5751;
+    border: 2px solid #fff;
+}
+
+.vectors__close-icon {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}
+
+.vectors__result {
+    text-align: center;
+    background: white;
+    width: 60%;
+    display: inline-block;
+    margin-left: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #666;
+}
+
 .qe__btns,
 .ce__btns,
-.qte__btns {
+.qte__btns,
+.vectors__btns {
     width: 100%;
     text-align: center;
 }
 
 .qe__send-btn,
 .ce__send-btn,
-.qte__send-btn {
+.qte__send-btn,
+.vectors__send-btn,
+.vectors__add-btn {
     display: inline-block;
     margin-bottom: 15px;
     padding: 10px;
@@ -72,6 +166,10 @@ html {
     font-weight: bold;
     outline: none;
     box-shadow: 1px 1px 2px #666;
+}
+
+.vectors__add-btn {
+    background: #49b11e;
 }
 
 .result__block {

@@ -44,3 +44,17 @@ module.exports.quarticEquation = function(req, res) {
         res.json(mathematics.error(1000));
     }
 };
+
+module.exports.vectorsSpace = function(req, res) {
+    let query = req.query;
+    if(Object.keys(query).length) {
+        try {
+            let vectors = JSON.parse(query.vectors);
+            res.json(mathematics.isVectorSpace(vectors));
+        } catch(e) {
+            res.json(mathematics.error(9000));
+        }
+    } else {
+        res.json(mathematics.error(5000));
+    }
+};

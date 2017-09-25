@@ -10,10 +10,19 @@
 </head>
 <body>
     <main class="main">
+        <nav class="main__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/"  class="nav__link nav__link--active">Решение алгебраических уравнений</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/vector-space" class="nav__link">Проверка векторного пространства</a>
+                </li>
+            </ul>
+        </nav>
         <h1 class="main__title">Решение алгебраических уравнений</h1>
         <section class="main__section qe">
             <h2 class="qe__title">Квадратное уравнение</h2>
-            <p class="qe__desc"></p>
             <div class="qe__inputs">
                 <input type="text" value="1" name="qe-a" id="qe-a" class="qe__input">
                 <span class="qe__var">x<sup>2</sup> + </span>
@@ -31,7 +40,6 @@
         </section>
         <section class="main__section ce">
             <h2 class="ce__title">Кубическое уравнение</h2>
-            <p class="ce__desc"></p>
             <div class="ce__inputs">
                 <input type="text" value="1" name="ce-a" id="ce-a" class="qe__input">
                 <span class="ce__var">x<sup>3</sup> + </span>
@@ -51,7 +59,6 @@
         </section>
         <section class="main__section qte">
             <h2 class="qte__title">Уравнение 4-й степени</h2>
-            <p class="qte__desc"></p>
             <div class="qte__inputs">
                 <input type="text" value="1" name="qte-a" id="qte-a" class="qe__input">
                 <span class="qte__var">x<sup>4</sup> + </span>

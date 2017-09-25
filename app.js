@@ -10,6 +10,7 @@ app.use(express.static(`./public`));
 app.use(`/api/v1`, api_v1);
 
 app.get(`/`, (req, res) => {res.sendFile(__dirname + `/views/index.html`)});
+app.get(`/vector-space`, (req, res) => {res.sendFile(__dirname + `/views/vector-space.html`)});
 
 app.all(`/*`, (req, res) => {
     res.status(404);
